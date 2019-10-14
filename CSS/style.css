@@ -1,0 +1,211 @@
+/* Links */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+html {
+    background-color: rgba(239, 89, 57, 0.05);
+}
+/* About Me Section */
+.AboutMe {
+   display: flex;
+}
+.margieImage{
+    flex: 50%;
+    background-image: url(../Images/margie.JPG);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.about {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    font-family: Avenir;
+    font-size: 42px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.22px;
+    color: #2d354e;
+    margin-bottom: 0;
+}
+h2 {
+  font-family: Avenir;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.69px;
+  color: #2d354e;
+  padding: 0;
+  margin: 0 ;
+}
+.description {
+    width: 458px;
+  height: 154px;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.84px;
+  color: #2d354e;
+}
+.funFacts {
+    width: 387px;
+    height: 57px;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.74px;
+    color: #2d354e;
+}
+#quote {
+    width: 252px;
+    height: 66px;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: oblique;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    color: #ffffff;
+}
+.quote {
+    width: 283px;
+    height: 66px;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    color: #ffffff;
+    background-color: rgba(45,53,78,0.5);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 300px;
+    margin-left: 50px;
+}
+
+/* Social Media Icons */
+a {
+    text-decoration: none;
+    color: #ef5939;
+}
+.socialIcons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.socialIcon {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    transition: .5s;
+    background-color: #ef5939;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+}
+.socialIcon:hover {
+    color: #ef5939;
+    background-color: #fff;
+    border: 2px solid #ef5939;
+    border-radius: 10px;
+}
+
+/* Case Study Section */
+hr {
+    width: 872px;
+    height: 1px;
+    border: solid 3px #ef5939;
+}
+.caseStudy1 {
+    display: flex;
+    flex-direction: column;
+
+}
+h3 {
+    height: 25px;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.95px;
+    color: #2d354e;
+    align-content: center;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+button:hover {
+    opacity: 0.8;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.invision {
+    width: 213px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #ef5939;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    text-align: center;
+    color: #ffffff;
+    margin: 8px;
+}
+
+.slideDeck {
+    width: 206px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #2d354e;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    text-align: center;
+    color: #ffffff;
+    margin: 8px;
+}
