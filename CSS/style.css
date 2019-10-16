@@ -5,9 +5,19 @@
 html {
     background-color: rgba(239, 89, 57, 0.05);
 }
+body {
+    margin: auto;
+    max-width: 1000px;
+}
 /* About Me Section */
 .AboutMe {
-   display: flex;
+   display: grid;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   margin: auto;
+   grid-template-columns: 2;
+   grid-template-areas:
+        "margieImage about"
 }
 .margieImage{
     flex: 50%;
@@ -17,12 +27,13 @@ html {
     background-position: center;
     margin-top: 20px;
     margin-bottom: 30px;
+    grid-area: margieImage;
 }
 .about {
     flex: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-left: 30px;
+    margin-left: 30px;
+    grid-area: about;
 }
 h1 {
     font-family: Avenir;
@@ -45,7 +56,19 @@ h2 {
   letter-spacing: 1.69px;
   color: #2d354e;
   padding: 0;
-  margin: 0 ;
+  margin: 0;
+}
+h3 {
+    font-family: Avenir;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.69px;
+    color: #2d354e;
+    padding: 0;
+    margin: 0;
 }
 .description {
     width: 458px;
@@ -58,6 +81,7 @@ h2 {
   line-height: normal;
   letter-spacing: 0.84px;
   color: #2d354e;
+  grid-area: description;
 }
 .funFacts {
     width: 387px;
@@ -111,26 +135,33 @@ a {
 .socialIcons {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-area: socialIcons;
 }
 .socialIcon {
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-    font-size: 30px;
-    transition: .5s;
-    background-color: #ef5939;
-    color: #fff;
-    width: 40px;
-    height: 40px;
+    background-color: rgba(239, 89, 57, 0.01);
+    color: #2d354e;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px 8px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 12px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(45,53,78,0.2);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    height: 50px;
+    font-size: 14px;
 }
 .socialIcon:hover {
-    color: #ef5939;
-    background-color: #fff;
-    border: 2px solid #ef5939;
-    border-radius: 10px;
+    background-color: #D9716F;
+    box-shadow: 0px 15px 20px rgba(217,113,111,0.5);
+    color: #fff;
+    transform: translateY(-4px);
 }
 
 /* Case Study Section */
@@ -144,7 +175,7 @@ hr {
     flex-direction: column;
 
 }
-h3 {
+.divider {
     height: 25px;
     font-family: Avenir;
     font-size: 18px;
@@ -154,13 +185,15 @@ h3 {
     line-height: normal;
     letter-spacing: 0.95px;
     color: #2d354e;
-    align-content: center;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
-
 .buttons {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
 }
 button:hover {
     opacity: 0.8;
@@ -177,35 +210,100 @@ button:hover {
     transform: scale(1.1);
   }
 .invision {
-    width: 213px;
-    height: 58px;
-    border-radius: 8px;
     background-color: #ef5939;
-    font-family: Avenir;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.84px;
-    text-align: center;
-    color: #ffffff;
-    margin: 8px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px 8px 16px;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    margin: 10px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(217,113,111,0.2);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    height: 50px;
+    font-size: 14px;
+}
+.slideDeck {
+    background-color: #2d354e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px 8px 16px;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 300;
+    margin: 10px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(45,53,78,0.2);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    height: 50px;
+    font-size: 14px;
+}
+.MBAimage {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-start: 2;
+}
+#MBAimage {
+    max-width: 1000px;
+    padding-top: 50px;
 }
 
-.slideDeck {
-    width: 206px;
-    height: 58px;
-    border-radius: 8px;
-    background-color: #2d354e;
+/* Footer */
+.footer {
+    display: grid;
+    grid-template-areas:
+        "myInfo socialIcons";
+    grid-template-rows: 100px 100px 100px;
+    color: #fff;
     font-family: Avenir;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.84px;
-    text-align: center;
-    color: #ffffff;
-    margin: 8px;
+    padding-top: 30px;
+    background-color: #2d354e;
+    height: 200px;
+    margin: auto;
 }
+.myInfo {
+    grid-area: myInfo;
+    padding-left: 40px;
+}
+.socialIconF {
+    background-color: #fff;
+    color: #2d354e;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px 8px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 10px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(45,53,78,0.2);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    height: 50px;
+    font-size: 14px;
+}
+.socialIconF:hover {
+    background-color: #D9716F;
+    box-shadow: 0px 15px 20px rgba(217,113,111,0.5);
+    color: #fff;
+    transform: translateY(-4px);
+}
+button {
+    background-color: #fff;
+    color: #2d354e;
+    border: none;
+    cursor: pointer;
+    padding: 4px 16px 4px 16px;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 300;
+    margin: 10px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    height: 25px;
+    font-size: 14px;
+}
+/* Media Queries */
