@@ -124,7 +124,7 @@ h3 {
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 300px;
-    margin-left: 50px;
+    margin-left: -20px;
 }
 
 /* Social Media Icons */
@@ -136,7 +136,7 @@ a {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-start: 2;
     grid-column-end: 5;
     grid-area: socialIcons;
